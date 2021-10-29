@@ -13,12 +13,16 @@ searchBtn.addEventListener('click', ()=>{
         fetch(url)
         .then(response => response.json())
         .then(data => {
-            gitAvatar.src = data.avatar_url
-            gitName.textContent = data.name
-            gitUserName.textContent = data.login
-            gitFollowers.textContent = data.followers
-            gitRepos.textContent = data.public_repos
-    
+            if(data.name !== undefined){
+                gitAvatar.src = data.avatar_url
+                gitName.textContent = `Nome: ${data.name}`
+                gitUserName.textContent = `Usuário: ${data.login}`
+                gitFollowers.textContent = `Seguidores: ${data.followers}`
+                gitRepos.textContent = `Quantidade de repositórios: ${data.public_repos}`
+            }else{
+                alert('ERRO')
+            }
+            console.log(data.name)
         })
     }
     
