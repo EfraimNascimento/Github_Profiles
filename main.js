@@ -19,8 +19,14 @@ searchBtn.addEventListener('click', ()=>{
                 gitUserName.textContent = `Usuário: ${data.login}`
                 gitFollowers.textContent = `Seguidores: ${data.followers}`
                 gitRepos.textContent = `Quantidade de repositórios: ${data.public_repos}`
+                container.style.opacity = '1';
+                profileInfos.style.opacity = '1';
+                profileError.style.opacity = '0';
             }else{
-                alert('ERRO')
+                profileError.style.opacity = '1';
+                container.style.opacity = '1';
+                profileInfos.style.opacity = '0';
+
             }
             console.log(data.name)
         })

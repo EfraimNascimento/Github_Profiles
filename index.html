@@ -5,16 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6881743ee1.js" crossorigin="anonymous"></script>
     <title>Github Profiles</title>
 </head>
 <body>
 
-    <div class="container">
-        <div class="search">
-            <input type="text" id="searchInput">
-            <button id="searchBtn">Pesquisar</button>
+    <div class="search">
+        <input type="text" id="searchInput">
+        <button id="searchBtn">Pesquisar</button>
+        <button id="switchBtn"></button>
+    </div>
+
+    <div id="container">
+        <div id="profileError">
+            <i class="far fa-times-circle"></i>
+            <h1>Este perfil não existe</h1>
         </div>
-        <div class="profileInfos">
+        <div id="profileInfos">
             <img src="" alt="Foto do Perfil" id="gitAvatar">
             <div class="data">
                 <ul>
