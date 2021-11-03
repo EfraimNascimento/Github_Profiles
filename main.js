@@ -1,5 +1,23 @@
 let searchBtn = document.getElementById('searchBtn');
+let switchBtn = document.getElementById('switchBtn');
+let iconBtn = document.getElementById('icon').classList.add('fa-sun');
 
+
+switchBtn.addEventListener('click',()=>{
+    document.getElementById('icon').classList.toggle('fa-sun');
+    
+
+    document.getElementById('content').classList.toggle('lightMode');
+    document.getElementById('container').classList.toggle('lightMode');
+    searchBtn.classList.toggle('lightMode');
+    switchBtn.classList.toggle('lightMode');
+    document.getElementById('searchInput').classList.toggle('lightMode');
+    document.getElementById('profileError').classList.toggle('lightMode');
+    document.getElementById('gitAvatar').classList.toggle('lightMode');
+    document.getElementById('newRepos').classList.toggle('lightMode');
+
+    document.getElementById('icon').classList.toggle('fa-moon');
+})
 
 searchBtn.addEventListener('click', ()=>{
 
